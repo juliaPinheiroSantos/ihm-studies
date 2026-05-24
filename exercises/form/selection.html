@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício sobre as tags de seleção</title>
+    </head>
+    <body>
+        <form action="https://httpbin.org/post" method="POST" autocomplete="off">
+            <p>Sexo:</p>
+            <input type="radio" name="sexo" id="m" value="M" checked>
+            <label for="m">Masculino:</label>
+            <input type="radio" name="sexo" id="f" value="F">
+            <label for="f">Feminino</label>
+
+            <p>Interesses:</p>
+            <input type="checkbox" id="html" name="tecnologia" value="HTML">
+            <label for="html">HTML</label>
+            <input type="checkbox" id="css" name="tecnologia" value="CSS">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="js" name="tecnologia" value="JS">
+            <label for="js">JS</label>
+            <input type="checkbox" id="ruby" name="tecnologia" value="RUBY">
+            <label for="ruby">RUBY</label>
+            <p>
+                <label for="estado">Escolha seu estado (uf):</label>
+                <select id="estado" name="uf">
+                    <option value="go">Goiás</option>
+                    <option value="mg">Minas Gerais</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="rn">Rio Grande do Norte</option>
+            </select>
+            </p>
+            <p>
+                <label for="cursos">Cursos Pretendidos:</label>
+                <select id="cursos" name="curso" multiple size="4">
+                    <optgroup label="Tecnologia">
+                        <option selected value="cc">Ciência da Computação</option>
+                        <option value="ec">Engenharia da Computação</option>
+                        <option value="si">Sistemas de Informação</option>
+                    </optgroup>
+                    <optgroup label="Outros">
+                        <option value="med">Medicina</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <input type="submit" name="Enviar">
+            </p>
+        </form>
+    </body>
+</html>
