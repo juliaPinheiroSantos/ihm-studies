@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício sobre Formulário de Cadastro</title>
+    </head>
+    <body>
+        <header>
+            <h1>Cadastro de Aluno</h1>
+        </header>
+        <main>
+            <form action="/cadastrar" method="POST">
+                <fieldset>
+                    <legend>Dados Pessoas:</legend>
+                    <p>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="name" placeholder="Digite seu nome" size="20" minlength="3" title="Seu nome precisa ter no mínimo 3 caracteres" required>
+                    </p>
+                    <p>
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" placeholder="Digite seu CPF"
+                            pattern="[0-9]{5}-[0-9]{3}" maxlenght="9" title="Seu CPF deve estar no seguinte formato: 00000-00" required>
+                    </p>
+                    <p>
+                        <label for="datanasc">Data de Nascimento</label>
+                        <input type="date" id="datanasc" required>
+                    </p>
+                    <p>
+                        <label>Sexo:</label>
+                        <label for="m">Masculino</label>
+                        <input type="radio" name="sexo" id="m" value="M" checked>
+                        <label for="f">Feminino</label>
+                        <input type="radio" name="sexo" id="f" value="F">
+                        <label for="n">Prefiro não informar</label>
+                        <input type="radio" name="sexo" id="n" value="Nan">
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Contato:</legend>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Digite seu email" size="30" title="Seu email dve estar no seguinte formato: nome@email.com" required>
+                    </p>
+                    <p>
+                        <label for="tel">Telefone:</label>
+                        <input type="tel" id="tel" placeholder="Digite seu telefone" title="Seu telefone deve estar no seguinte formato: (00)00000-0000"
+                        pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" required>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Acesso:</legend>
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha" title="Sua senha deve conter pelo menos 1 letra minúscula, 1 letra maiúscula, 1 número, 1 caractere especial."
+                    pattern="/(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)(?=.*?[\W_])^[!-~][ -~]{6,253}[!-~]$/" minlength="8" required>
+                </fieldset>
+                <p>
+                    <p>Observações:</p>
+                    <textarea id="obs" maxlength="300"></textarea>
+                </p>
+                <p>
+                    <label for="aceite">Aceito os termos</label>
+                    <input type="checkbox" id="aceite" name="termos">
+                </p>
+                <p>
+                    <button type="submit" autofocus>Cadastrar</button>
+                    <button type="reset">Limpar</button>
+                </p>
+            </form>
+        </main>
+    </body>
+</html>
